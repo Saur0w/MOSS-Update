@@ -1,0 +1,15 @@
+
+.counter {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 20;
+  background: transparent;
+
+  span {
+    margin: 0;
+    color: #ffffff;
+    font-size: 72px;
+    line-height: 1;
+  }
+}

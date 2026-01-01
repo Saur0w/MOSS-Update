@@ -1,0 +1,102 @@
+
+.wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background: transparent;
+}
+
+.centerStage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.logoText {
+  margin: 0;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  font-size: clamp(64px, 14vw, 180px);
+  will-change: transform;
+  color: #ffffff;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 35px;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 2;
+  font-weight: 300;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoDock {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+
+  .logoText {
+    font-size: 28px;
+    font-weight: 700;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .el {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+    cursor: pointer;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      &:hover { color: #ddd; }
+    }
+
+    .indicator {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      top: 45px;
+      left: 50%;
+      background-color: #fff;
+      border-radius: 50%;
+      transform: scale(0) translateX(-50%);
+      transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+    }
+
+    &:hover .indicator { transform: scale(1) translateX(-50%); }
+  }
+}
+
+@media (max-width: 768px) {
+  .header { padding: 20px; }
+  .logoText { font-size: clamp(44px, 16vw, 120px); }
+  .logoDock .logoText { font-size: 22px; }
+}

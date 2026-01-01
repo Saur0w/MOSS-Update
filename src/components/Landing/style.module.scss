@@ -1,0 +1,43 @@
+.landing {
+  position: relative;
+  height: 100dvh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #151515;
+  padding: 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+
+  .container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-inline: auto;
+    height: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+    will-change: transform;
+
+    p {
+      font-size: 72px;
+      color: #151515;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 24px;
+    > h1 { font-size: 40px; }
+  }
+}
