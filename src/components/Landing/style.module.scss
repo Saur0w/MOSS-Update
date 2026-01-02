@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
+
 .landing {
   position: relative;
   height: 100dvh;
@@ -31,6 +33,7 @@
     will-change: transform;
 
     p {
+      font-family: "Atkinson Hyperlegible Mono", sans-serif;
       font-size: 72px;
       color: #151515;
     }
