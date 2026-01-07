@@ -56,5 +56,4 @@ export default function MagneticWrapper({ children }: MagneticProps) {
         children as React.ReactElement<React.HTMLProps<HTMLElement>>,
         { ref: magnetic }
     );
-
 }

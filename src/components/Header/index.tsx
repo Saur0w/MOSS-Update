@@ -6,6 +6,7 @@ import { Flip } from "gsap/Flip";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import styles from "./style.module.scss";
+import Magnetic from '@/ui/Magnetic/index';
 
 gsap.registerPlugin(Flip, useGSAP);
 
@@ -44,15 +45,21 @@ export default function Header() {
 
                 <nav className={styles.nav}>
                     <div className={styles.el}>
-                        <Link href="/work">Work</Link>
+                        <Magnetic>
+                            <Link href="/work">Work</Link>
+                        </Magnetic>
                         <div className={styles.indicator} />
                     </div>
                     <div className={styles.el}>
-                        <Link href="/about">About</Link>
+                        <Magnetic>
+                            <Link href="/about">About</Link>
+                        </Magnetic>
                         <div className={styles.indicator} />
                     </div>
                     <div className={styles.el}>
-                        <Link href="/contact">Contact</Link>
+                        <Magnetic>
+                            <Link href="/contact">Contact</Link>
+                        </Magnetic>
                         <div className={styles.indicator} />
                     </div>
                 </nav>
