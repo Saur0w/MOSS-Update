@@ -23,6 +23,11 @@ export default function Counter() {
             },
             onComplete: () => {
                 window.dispatchEvent(new CustomEvent("app:start", { detail: { source: "counter" } }));
+                gsap.to(el, {
+                    autoAlpha: 0,
+                    duration: 0.5,
+                    ease: "power1.out"
+                });
             },
         });
 

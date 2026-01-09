@@ -1,4 +1,3 @@
-// landing/index.tsx
 "use client";
 
 import styles from "./style.module.scss";
@@ -35,7 +34,7 @@ export default function Landing() {
     return (
         <section className={styles.landing} ref={landingRef}>
             <div className={styles.container} ref={containerRef}>
-                <p ref={paraRef}>Monetizing & Optimizing<br /> Sustainable Systems </p>
+                <p ref={paraRef}>Monitoring & Optimizing<br /> Sustainable Systems </p>
             </div>
             <Counter />
         </section>
